@@ -13,7 +13,7 @@ module.exports = {
 
     // deal response before send to client
     * beforeSendResponse(requestDetail, responseDetail) {
-
+        return null;
     },
     // if deal https request
     * beforeDealHttpsRequest(requestDetail) {
@@ -28,10 +28,12 @@ module.exports = {
     // error happened when dealing requests
     * onError(requestDetail, error) {
         console.log(requestDetail)
+        return null;
     },
 
     // error happened when connect to https server
     * onConnectError(requestDetail, error) {
         console.log(requestDetail)
+        return null;
     }
 }
