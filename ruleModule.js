@@ -23,11 +23,10 @@ module.exports = {
         console.log(requestDetail.port)
         console.log(requestDetail.method)
         return true
-    }
+    },
 
     // error happened when dealing requests
-    *
-    onError(requestDetail, error) {
+    * onError(requestDetail, error) {
         console.log(requestDetail)
     },
 
@@ -35,4 +34,4 @@ module.exports = {
     * onConnectError(requestDetail, error) {
         console.log(requestDetail)
     }
-};
+}
