@@ -3,21 +3,31 @@ module.exports = {
 
     // intercept before send request to server
     * beforeSendRequest(requestDetail) {
-        console.log(requestDetail)
+        console.error("--------------------------")
+        console.log(requestDetail.hostname)
+        console.log(requestDetail.protocol)
+        console.log(requestDetail.port)
+        console.log(requestDetail.method)
+        return null
     },
 
     // deal response before send to client
     * beforeSendResponse(requestDetail, responseDetail) {
-        console.log(requestDetail)
+
     },
     // if deal https request
     * beforeDealHttpsRequest(requestDetail) {
-        console.log(requestDetail)
-    },
-
+        console.error("--------------------------")
+        console.log(requestDetail.hostname)
+        console.log(requestDetail.protocol)
+        console.log(requestDetail.port)
+        console.log(requestDetail.method)
+        return true
+    }
 
     // error happened when dealing requests
-    * onError(requestDetail, error) {
+    *
+    onError(requestDetail, error) {
         console.log(requestDetail)
     },
 
